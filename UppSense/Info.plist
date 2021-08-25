@@ -22,10 +22,10 @@
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>Turn on your Bluetooth! The biosensor sends the result over Bluetooth</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Turn on location services so that the test result location can be saved</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Turn on your Bluetooth! The biosensor sends the result over Bluetooth</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Turn on location services so that the test result location can be saved</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -58,11 +58,13 @@ struct ContentView: View {
             
             Spacer()
             
+            /*
             Button("Test") {
                 bleManager.currentResultMsg = resultMsg(result: "Positive", biosensorID: "98XA", testID: "1782", date: "7th September 2021", time: "12:14 CET")
                 
                 bleManager.showAlert = true
-            }
+                ble_in_test()
+            } */
             
             Divider()
             
@@ -111,25 +113,31 @@ struct ContentView: View {
             
             var placemark: String { return("\(locationManager.placemark?.name ?? ""), \(locationManager.placemark?.subLocality ?? ""), \(locationManager.placemark?.locality ?? ""), \(locationManager.placemark?.country ?? "")") }
             
-            /*
-            // Save new reult
-            JsonData.jsonArray.append(resultsJSONModel(id: (JsonData.jsonArray.count + 1),
-                                                       result: bleManager.currentResultMsg.result,
-                                                       biosensorID: bleManager.currentResultMsg.biosensorID,
-                                                       testID: bleManager.currentResultMsg.testID,
-                                                       date: bleManager.currentResultMsg.date,
-                                                       time: bleManager.currentResultMsg.time,
-                                                       coordinates: Coordinates(latitude: coordinate.latitude, longitude: coordinate.longitude)))
-            JsonData.writeJSON()
-            */
- 
             let primaryButton = Alert.Button.default(Text("Yes")) {
                 bleManager.showAlert = false
                 print("Yes")
+                // Save new reult
+                JsonData.jsonArray.append(resultsJSONModel(id: (JsonData.jsonArray.count + 1),
+                                                           result: bleManager.currentResultMsg.result,
+                                                           biosensorID: bleManager.currentResultMsg.biosensorID,
+                                                           testID: bleManager.currentResultMsg.testID,
+                                                           date: bleManager.currentResultMsg.date,
+                                                           time: bleManager.currentResultMsg.time,
+                                                           coordinates: Coordinates(latitude: coordinate.latitude, longitude: coordinate.longitude)))
+                JsonData.writeJSON()
             }
             let secondaryButton = Alert.Button.cancel(Text("No")) {
                 bleManager.showAlert = false
                 print("No")
+                // If you want to change specific info based on "no", remove fields here. 
+                JsonData.jsonArray.append(resultsJSONModel(id: (JsonData.jsonArray.count + 1),
+                                                           result: bleManager.currentResultMsg.result,
+                                                           biosensorID: bleManager.currentResultMsg.biosensorID,
+                                                           testID: bleManager.currentResultMsg.testID,
+                                                           date: bleManager.currentResultMsg.date,
+                                                           time: bleManager.currentResultMsg.time,
+                                                           coordinates: Coordinates(latitude: coordinate.latitude, longitude: coordinate.longitude)))
+                JsonData.writeJSON()
             }
             
             return Alert(title: Text("New result recieved"),
@@ -143,3 +151,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

@@ -26,7 +26,6 @@ struct ResultsView: View {
                     Text("Biosensor ID: \(jsonItem.biosensorID)")
                     Text("Test ID: \(jsonItem.testID)")
                     Text("Location: Lattitude [\(jsonItem.coordinates.latitude)], Longitude [\(jsonItem.coordinates.longitude)]")
-                    
                     Divider()
                 }.padding()
             }

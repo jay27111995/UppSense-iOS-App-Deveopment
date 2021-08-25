@@ -25,7 +25,7 @@ struct HomeView: View {
                 .interpolation(.none)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 250, height: 250)
+                .frame(width: 200, height: 200)
         }
     }
 }

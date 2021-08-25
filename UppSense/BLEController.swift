@@ -85,7 +85,7 @@ class BLEController: NSObject, ObservableObject, CBPeripheralManagerDelegate
         
         print(self.Result)
         
-        // String will be recieved in format Positive;BiosensorID;TestID;Date;Time
+        // String will be recieved in format Positive$BiosensorID$TestID$Date$Time
         let result_str_array = self.Result.components(separatedBy: "$")
         currentResultMsg = resultMsg(result: result_str_array[0], biosensorID: result_str_array[1],
                                      testID: result_str_array[2], date: result_str_array[3], time: result_str_array[4])
@@ -95,4 +95,14 @@ class BLEController: NSObject, ObservableObject, CBPeripheralManagerDelegate
         print("Sending response: Success")
         peripheral.respond(to: request, withResult: .success)
     }
+}
+
+func ble_in_test() {
+    let str = "Positive$KA70$3763$8th September 2012$17:20 CET"
+    let str_array = str.components(separatedBy: "$")
+    print(str_array[0])
+    print(str_array[1])
+    print(str_array[2])
+    print(str_array[3])
+    print(str_array[4])
 }
