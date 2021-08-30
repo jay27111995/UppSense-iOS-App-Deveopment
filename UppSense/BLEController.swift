@@ -86,7 +86,7 @@ class BLEController: NSObject, ObservableObject, CBPeripheralManagerDelegate
         print(self.Result)
         
         // String will be recieved in format Positive$BiosensorID$TestID$Date$Time
-        let result_str_array = self.Result.components(separatedBy: "$")
+        let result_str_array = self.Result.components(separatedBy: "+")
         currentResultMsg = resultMsg(result: result_str_array[0], biosensorID: result_str_array[1],
                                      testID: result_str_array[2], date: result_str_array[3], time: result_str_array[4])
         showAlert = true // Show alert message
