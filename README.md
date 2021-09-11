@@ -8,7 +8,7 @@ Facebook: https://www.facebook.com/UppsalaSensUs
 Instagram: https://www.instagram.com/uppsalasensus/ 
 Sensus Competition: https://digital.sensus.org/teams/4
 
-Read team results document in repo for more info. 
+#####Read team results document in repo for more info. 
 
 Description: 
 The main purpose of the app is to display the H1N1 test result from the biosensor to the user. 
