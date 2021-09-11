@@ -1,4 +1,4 @@
-# UppSense-iOS-App-Deveopment
+# iOS App for UppSense H1N1 Biosensor
 Medical app developed for InfluSense 1.0 - H1N1 Biosensor: developed by UppSense, Uppsala University, Sweden 
 
 UpSense team and project info:
@@ -7,6 +7,8 @@ LinkedIn: https://www.linkedin.com/company/uppsense/mycompany/
 Facebook: https://www.facebook.com/UppsalaSensUs
 Instagram: https://www.instagram.com/uppsalasensus/ 
 Sensus Competition: https://digital.sensus.org/teams/4
+
+Read team results document in repo for more info. 
 
 Description: 
 The main purpose of the app is to display the H1N1 test result from the biosensor to the user. 
