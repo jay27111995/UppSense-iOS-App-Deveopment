@@ -12,5 +12,5 @@ Description:
 The main purpose of the app is to display the H1N1 test result from the biosensor to the user. 
 The design implemented works as follows: 
 * A QR code displayed on the app will indicate the BLE(Bluetooth Low Energy) UUID(Universally Unique Identifier) to connect to the phone. 
-* The QR code is read by the biosensor (RaspberryPI + Camera), then connects to the app via BLE and sends the result. 
+* The QR code is read by the biosensor (RaspberryPI + Camera), then connects to the app via BLE and sends the result. For code on the biosensor visit: https://github.com/jay27111995/UppSense2021-Embedded-Control
 * Additionally, the app also saves the current location of the test, displays to the user and saves it on the phone.   
